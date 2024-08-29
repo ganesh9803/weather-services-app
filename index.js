@@ -1,8 +1,6 @@
-// index.js
-
 const express = require('express');
 const axios = require('axios');
-require('dotenv').config(); // Ensure this line is present
+require('dotenv').config(); 
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -10,7 +8,7 @@ const port = process.env.PORT || 3000;
 // Middleware to parse JSON
 app.use(express.json());
 
-// Endpoint to fetch weather information
+// fetch weather information
 app.get('/weather', async (req, res) => {
   const { city } = req.query;
 
@@ -19,7 +17,7 @@ app.get('/weather', async (req, res) => {
   }
 
   try {
-    const apiKey = process.env.REACT_APP_WEATHER_API_KEY; // Match environment variable name
+    const apiKey = process.env.REACT_APP_WEATHER_API_KEY; 
 
     if (!apiKey) {
       return res.status(500).json({ error: 'API Key is missing' });
@@ -50,7 +48,7 @@ app.get('/weather', async (req, res) => {
   }
 });
 
-// Start the server
+
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
 });
