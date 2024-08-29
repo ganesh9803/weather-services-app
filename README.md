@@ -13,10 +13,10 @@ A simple Node.js service that fetches and displays weather information based on 
 - Node.js
 - npm
 
-## Setup
+## start
 
-1. **Clone the Repository**
+Run the Backend Server: Start the server by running:
 
-   ```bash
-   git clone <repository-url>
-   cd weather-service
+-Node index.js
+
+by sending requesturl in RequestURL.http by change query parameter city name accordingly disply response of weather details
