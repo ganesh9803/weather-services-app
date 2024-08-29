@@ -1,4 +1,4 @@
-# Weather Service
+# Weather-Service-app
 
 A simple Node.js service that fetches and displays weather information based on user input (city or location) using the Weatherstack API.
 
